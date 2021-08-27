@@ -30,7 +30,7 @@ global $DB;
 // Configurações básicas de uma página no Moodle:
 $PAGE->set_url(new moodle_url('/local/message/manage.php'));
 $PAGE->set_context(\context_system::instance()); // Mais em: https://docs.moodle.org/39/en/Context
-$PAGE->set_title("Notificações do sistema");
+$PAGE->set_title(get_string('pluginname', 'local_message'));
 
 
 // Informações do BD com o objeto $DB:
@@ -40,10 +40,10 @@ $messages_from_db = $DB->get_records('local_message');
 // pasta "templates", e referenciar pelo método $OUTPUT->render_from_template. A variável
 // $templateContext é um objeto PHP com pares chave-conteúdo.
 $templateContext = (object) [
-    'plugin_title' => 'Notificações do sistema',
-    'plugin_desc'  => 'Mensagens e notificações a serem exibidas no sistema. É possível gerenciar
-    os conteúdos e mensagens a partir da opção',
-    'plugin_edit' => 'Editar mensagens',
+    'plugin_title' => get_string('pluginname', 'local_message'),
+    'plugin_desc'  => get_string('plugindesc', 'local_message'),
+    'plugin_edit' =>  get_string('editmessages', 'local_message'),
+    'registered_notifications' => get_string('registered', 'local_message'),
     'current_messages' => array_values($messages_from_db),
     'edit_url' => new moodle_url('/local/message/edit.php'), 
 ];

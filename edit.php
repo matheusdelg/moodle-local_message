@@ -32,7 +32,7 @@ global $DB;
 // Configurações básicas de uma página no Moodle:
 $PAGE->set_url(new moodle_url('/local/message/manage.php'));
 $PAGE->set_context(\context_system::instance()); // Mais em: https://docs.moodle.org/39/en/Context
-$PAGE->set_title("Notificações do sistema");
+$PAGE->set_title(get_string('pluginname', 'local_message'));
 
 // Idealmente, o processamento de formulários deve ser feito antes da renderização da página. A 
 // definição do objeto form está na pasta "classes/form":
@@ -50,7 +50,7 @@ else if ($fromform = $mform->get_data()) {
     ];
 
     $DB->insert_record('local_message', $record);
-    redirect($CFG->wwwroot . '/local/message/manage.php', 'Notificação adicionada com sucesso.');
+    redirect($CFG->wwwroot . '/local/message/manage.php', get_string('notificationadded', 'local_message'));
 } 
 
 // O objeto $OUTPUT renderiza o visual da página.

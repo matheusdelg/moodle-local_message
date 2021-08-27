@@ -23,12 +23,12 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
- $string['pluginname'] = 'System notifications';
- $string['managenotifications'] = 'Manage notifications';
- $string['pendingnotifications'] = 'Pending notifications';
- $string['editnotifications'] = 'Edit Notifications';
- $string['notificationadded'] = 'Notification successfully added';
-$string['plugindesc'] = 'Messages and notifications to be exibithed on system.
-You can manage messages and its contents by the option';
-$string['editmessages'] = 'Edit messages';
-$string['registered'] = 'Registered notifications';
+$string['pluginname'] = 'Notificações do sistema';
+$string['plugindesc'] = 'Mensagens e notificações a serem exibidas no sistema. É possível gerenciar
+ os conteúdos e mensagens a partir da opção';
+$string['managenotifications'] = 'Gerenciar notificações';
+$string['pendingnotifications'] = 'Notificações pendentes';
+$string['editnotifications'] = 'Editar notificações';
+$string['notificationadded'] = 'Notificação adicionada com sucesso';
+$string['editmessages'] = 'Editar mensagens';
+$string['registered'] = 'Notificações registradas';
